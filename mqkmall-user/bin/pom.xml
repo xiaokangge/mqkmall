@@ -40,7 +40,18 @@
                 </exclusion>
             </exclusions>
         </dependency>
-        
+        <!-- 通用mapper -->
+        <dependency>
+            <groupId>tk.mybatis</groupId>
+            <artifactId>mapper-spring-boot-starter</artifactId>
+            <version>1.2.3</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-starter-jdbc</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
         <dependency>
             <groupId>org.mybatis.spring.boot</groupId>
             <artifactId>mybatis-spring-boot-starter</artifactId>
@@ -55,11 +66,7 @@
             <artifactId>mysql-connector-java</artifactId>
             <scope>runtime</scope>
         </dependency>
-<dependency>
- <groupId>com.mqkmall</groupId>
-    <artifactId>mqkmall-api</artifactId>
-    <version>1.0-SNAPSHOT</version>
-</dependency>
+
     </dependencies>
 
     <build>
