@@ -1,7 +1,7 @@
 package com.mqkmall.user.controller;
 
-import com.mqkmall.user.bean.UmsMember;
 import com.mqkmall.user.bean.UmsMemberReceiveAddress;
+import com.mqkmall.user.bean.UmsMember;
 import com.mqkmall.user.service.UmsMemberReceiveAddressService;
 import com.mqkmall.user.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
