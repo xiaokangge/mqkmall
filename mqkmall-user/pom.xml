@@ -59,11 +59,6 @@
 <!--            <artifactId>mysql-connector-java</artifactId>-->
 <!--            <scope>runtime</scope>-->
 <!--        </dependency>-->
-<dependency>
- <groupId>com.mqkmall</groupId>
-    <artifactId>mqkmall-api</artifactId>
-    <version>1.0-SNAPSHOT</version>
-</dependency>
         <dependency>
             <groupId>com.mqkmall</groupId>
             <artifactId>mqkmall-service-util</artifactId>
