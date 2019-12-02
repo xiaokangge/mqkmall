@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mqkmall.manage.mapper.PmsBaseAttrInfoMapper">
+
+    <select id="select" resultType="com.mqkmall.user.bean.PmsProductInfo">
+        select t.* from pms_product_info t where t.catalog3_id = #{catalog3Id}
+    </select>
+
+</mapper>
