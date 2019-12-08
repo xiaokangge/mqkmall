@@ -1,8 +1,11 @@
 package com.mqkmall.manage.controller;
 
 import com.alibaba.dubbo.config.annotation.Reference;
+import com.mqkmall.manage.MqkmallManageWebApplication;
+import com.mqkmall.manage.util.PmsUploadUtil;
 import com.mqkmall.user.bean.PmsProductInfo;
 import com.mqkmall.user.service.SpuService;
+import org.csource.fastdfs.ClientGlobal;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -25,7 +28,7 @@ public class SpuController {
     @RequestMapping("saveSpuInfo")
     @ResponseBody
     public String saveSpuInfo(@RequestBody PmsProductInfo pmsProductInfo){
-
+        spuService.saveSpuInfo(pmsProductInfo);
 
         return "success";
     }
@@ -36,8 +39,9 @@ public class SpuController {
         // 将图片或者音视频上传到分布式的文件存储系统
 
         // 将图片的存储路径返回给页面
-        String imgUrl = "https://m.360buyimg.com/babel/jfs/t5137/20/1794970752/352145/d56e4e94/591417dcN4fe5ef33.jpg";
-
+        String imgUrl = PmsUploadUtil.uploadImage(multipartFile);
+        System.out.println(imgUrl);
         return imgUrl;
     }
+
 }
