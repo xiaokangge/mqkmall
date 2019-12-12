@@ -1,0 +1,30 @@
+server:
+  port:  9700
+  dubbo:
+    application:  item-web
+    protocol:
+      #dubbo��ͨ��Э������
+      name:  dubbo
+    registry:
+      #zookeeperע�����ĵ�ַ
+      address:  zookeeper://49.235.153.158:2181?backup=49.235.153.158:2183,49.235.153.158:2182
+      protocol:  zookeeper
+    base-package: com.mqkmall
+    consumer:
+      timeout: 60000
+      check:  false
+  mybatis:
+    mapperLocations:  classpath:mapper/*Mapper.xml
+    configuration:
+      map-underscore-to-camel-case:  true
+      logImpl: org.apache.ibatis.logging.stdout.StdOutImpl
+  logging:
+    level:
+      root:  info
+spring:
+# 关闭thymeleaf的缓存(热部署)
+  thymeleaf:
+    cache:  false
+
+  # 松校验
+    mode:  LEGACYHTML5
